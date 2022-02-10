@@ -3,6 +3,22 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Team 13 C# Project</h1>
+    <p>Our first website on C#</p>
+    
+</div>
+
+<form method="get" action="simpleform.asp">
+First Name: <input type="text" name="fname"><br>
+Last Name: <input type="text" name="lname"><br><br>
+<input type="submit" value="Submit">
+</form>
+
+
+<div>
+    Welcome
+<%
+response.write(request.querystring("fname"))
+response.write("" & request.querystring("lname"))
+%>
 </div>
